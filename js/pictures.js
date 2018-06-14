@@ -26,18 +26,13 @@ var getRandomItemFromArray = function (array) {
   return array[Math.floor(Math.random() * array.length)];
 };
 
-var getRandomItemsFromArray = function (array, count) {
-  var randomItemsFromArray = array.sample(array, count);
-  return randomItemsFromArray;
-};
-
-var getPhotos = function (count, minLikes, maxLikes, commentsCount) {
+var getPhotos = function (count, minLikes, maxLikes) {
   var photos = [];
   for (var i = 0; i < count; i++) {
     photos[i] = {
       url: 'photos/' + (i + 1) + '.jpg',
       likes: getRandomIntBetweenTwo(minLikes, maxLikes),
-      comments: getRandomItemFromArray(PHOTO_COMMENTS, commentsCount),
+      comments: getRandomItemFromArray(PHOTO_COMMENTS),
       description: getRandomItemFromArray(PHOTO_DESCRIPTIONS)
     };
   }
