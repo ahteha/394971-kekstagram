@@ -90,6 +90,7 @@ var renderBigPicture = function (photo) {
 };
 
 renderBigPicture(getRandomItemFromArray(getPhotos(25, 15, 200, 2)));
+bigPicture.classList.remove('hidden');
 
 var socialCommentCount = document.querySelector('.social__comment-count');
 var socialCommentLoad = document.querySelector('.social__loadmore');
